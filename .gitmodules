@@ -1,0 +1,3 @@
+[submodule "exif-py"]
+	path = exifpy
+	url = https://github.com/ianare/exif-py.git
