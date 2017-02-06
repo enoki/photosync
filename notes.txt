@@ -1,0 +1,2 @@
+Symlink creation:
+http://superuser.com/questions/124679/how-do-i-create-a-link-in-windows-7-home-premium-as-a-regular-user
