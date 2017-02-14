@@ -25,7 +25,8 @@ def symlink(src_, dst_):
     dst = os.path.normpath(dst_)
 
     if sys.platform.startswith('win'):
-        kdll.CreateSymbolicLinkA(dst, src, 0)
+        subprocess.call(['mklink', dst, src], shell=True)
+        #kdll.CreateSymbolicLinkA(dst, src, 0)
     else:
         os.symlink(src, dst)
 
@@ -72,5 +73,5 @@ srcRoot = args.srcDir
 dstRoot = args.dstDir
 for root, dirs, files in scandir.walk(srcRoot, onerror=onError):
     for name in files:
-        if name[-3:].lower() == 'jpg':
+        if name[-3:].lower() in ('jpg',):
             mklink(root + '/' + name, dstRoot)
