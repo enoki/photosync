@@ -1,2 +1,8 @@
 Symlink creation:
 http://superuser.com/questions/124679/how-do-i-create-a-link-in-windows-7-home-premium-as-a-regular-user
+
+# Command line
+python sync.py -v “e:\Digital Pics\$My Pictures” e:/Pictures
+
+# How to use rclone:
+rclone -L -c --transfers 1 --log-file c:\temp\log.txt -v copy e:\Pictures remote:Pictures
